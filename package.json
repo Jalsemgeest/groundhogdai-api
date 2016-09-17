@@ -1,0 +1,26 @@
+{
+  "name": "movie-mystic-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zackharley/movie-mystic-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zackharley/movie-mystic-api/issues"
+  },
+  "homepage": "https://github.com/zackharley/movie-mystic-api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "superagent": "^2.2.0"
+  }
+}
