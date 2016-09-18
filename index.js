@@ -17,5 +17,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const server = app.listen(process.env.PORT || 3000, () => {
   const { address, port } = server.address();
-  console.log(`calling-card-api listening at http://${address}:${port}`);
+  console.log(`Groundhog d.Ai API listening at http://${address}:${port}`);
 });

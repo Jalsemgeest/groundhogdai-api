@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: groundhogdai
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: groundhogdai-pods
+    spec:
+      containers:
+      - image: gcr.io/hackthenorth16-1567/groundhogdai-api:1.0
+        name: groundhogdai-api-container
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: http-server
