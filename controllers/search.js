@@ -13,6 +13,20 @@ class Search {
     console.log(req);
     const movie = new MovieSearch(req);
 
+    console.log(movie);
+
+    console.log(JSON.stringify(movie.mlSearch));
+
+    // res.header('Access-Control-Allow-Origin', '*');
+    // res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
+    // res.setHeader('Access-Control-Allow-Origin', '*');
+    // // res.set('Access-Control-Allow-Origin', '*');
+    // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // // Request methods you wish to allow
+    // res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
     request({
       url: `${config.ML_SERVER.BASE_URL}/workspaces/8e9dafeced474449bcffe877931cd231/services/ad14949ab58c4888b14fbe15769b9c9d/execute?api-version=2.0&details=true`, // URL to hit
       method: 'POST',
