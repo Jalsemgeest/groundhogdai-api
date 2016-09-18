@@ -1,5 +1,6 @@
 const Index = require('./controllers/index');
 const TopTen = require('./controllers/topten');
+const Search = require('./controllers/search');
 
 class Routes {
   static setup(app) {
@@ -8,9 +9,9 @@ class Routes {
 
     // GET REQUESTS
     app.get('/top10', TopTen.getTop);
+    app.get('/search/:movieTitle', Search.byTitle);
 
     // POST REQUESTS
-
   }
 }
 
