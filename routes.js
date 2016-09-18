@@ -9,9 +9,9 @@ class Routes {
 
     // GET REQUESTS
     app.get('/top10', TopTen.getTop);
-    app.get('/search/:movieTitle', Search.byTitle);
 
     // POST REQUESTS
+    app.post('/search', Search.byTitle);
   }
 }
 
