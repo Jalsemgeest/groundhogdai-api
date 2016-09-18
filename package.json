@@ -4,20 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "deploy": "gcloud preview app deploy -q"
+    "docker:build": "docker build -t gcr.io/hackthenorth16-1567/groundhogdai-api:1.0 .",
+    "docker:run": "docker run -ti -p 8080:80 gcr.io/hackthenorth16-1567/groundhogdai-api:1.0",
+    "docker:push": "gcloud docker push gcr.io/hackthenorth16-1567/groundhogdai-api:1.0",
+    "kubectl:deployment": "kubectl apply -f deployment.yaml",
+    "kubectl:service": "kubectl apply -f service.yaml"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zackharley/movie-mystic-api.git"
+    "url": "git+https://github.com/zackharley/groundhogdai-api.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zackharley/movie-mystic-api/issues"
+    "url": "https://github.com/zackharley/groundhogdai-api/issues"
   },
-  "homepage": "https://github.com/zackharley/movie-mystic-api#readme",
+  "homepage": "https://github.com/zackharley/groundhogdai-api#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
