@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node index.js"
+    "start": "node index.js",
+    "deploy": "gcloud preview app deploy -q"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zackharley/movie-mystic-api.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zackharley/movie-mystic-api/issues"
   },
@@ -22,5 +23,6 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "superagent": "^2.2.0"
-  }
+  },
+  "version": "6.6.0"
 }
